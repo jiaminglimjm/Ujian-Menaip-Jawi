@@ -33,5 +33,5 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## Demo
-![Demo Image](/images/pratonton.png)
+![Demo Image](/gambar/pratonton.png)
 [**View fluxTyper demo** (powered by GitHub Pages)](https://ffffff-base16.github.io/fluxTyper/)
