@@ -28,14 +28,14 @@ $(document).ready(function() {
     $('div.bodyCurtain').fadeOut(500);
     for (let n = 0; n < amountOfWords; n++) {
         let jawiWord = wordBank[randomInteger(0, wordBank.length-1)];
-        // hamzah tiga suku
-        words.push(jawiWord.replace('ء', '<span style="bottom:8px;position:relative;">ء</span>'));
+        words.push(jawiWord);
     }
     wordsRemaining = words.length;
     words.forEach((e) => {
         let div = document.createElement("div");
         div.className = 'word';
-        div.innerHTML = e;
+        // hamzah tiga suku
+        div.innerHTML = e.replace('ء', '<span style="bottom:8px;position:relative;">ء</span>');
         passageContainer.appendChild(div);
     });
 })
@@ -108,6 +108,7 @@ function beginTest() {
 }
 
 function endTest() {
+    document.getElementById('stats_wordsPerMinute').innerText = Math.max(WPM, correctWords);
     $('div.passage_Container').slideUp(250);
     $('div.passageInput_Container').slideUp(250);
     $('div.endgame_Container').fadeIn(500);
