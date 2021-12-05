@@ -18,6 +18,7 @@ let wordsRemaining;
 
 var passageContainer = document.getElementsByClassName('passage_Container')[0];
 var passageInput = document.getElementsByClassName('passageInput')[0];
+passageInput.value = '';
 
 function randomInteger(min, max) { //from MDN
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -26,13 +27,15 @@ function randomInteger(min, max) { //from MDN
 $(document).ready(function() {
     $('div.bodyCurtain').fadeOut(500);
     for (let n = 0; n < amountOfWords; n++) {
-        words.push(wordBank[randomInteger(0, wordBank.length)]);
+        let jawiWord = wordBank[randomInteger(0, wordBank.length-1)];
+        // hamzah tiga suku
+        words.push(jawiWord.replace('ء', '<span style="bottom:8px;position:relative;">ء</span>'));
     }
     wordsRemaining = words.length;
     words.forEach((e) => {
         let div = document.createElement("div");
         div.className = 'word';
-        div.append(e);
+        div.innerHTML = e;
         passageContainer.appendChild(div);
     });
 })
@@ -40,8 +43,8 @@ $(document).ready(function() {
 function shiftWord() {
     var word = document.getElementsByClassName('word')[0];
     $("div.word:nth-child(1)").animate({
-        marginLeft: '-100px',
-    }, 50, function() {
+        marginRight: '100px',
+    }, 10, function() {
         word.remove();
     });
     updateCurrentWord();
@@ -75,9 +78,10 @@ function showError() {
 
 function calcWPM() {
     //Count a word as 4 characters
-    let wordsEstimate = correctChars / 4;
+    // https://brunei-linguistics.blogspot.com/2017/08/word-length-in-malay-and-english.html
+    let wordsEstimate = correctChars / 6.5;
     WPM = (wordsEstimate / timeElapsed)*60;
-    WPM = parseFloat(WPM).toFixed(0);
+    WPM = parseFloat(WPM).toFixed(1);
     document.getElementById('stats_wordsPerMinute').innerText = WPM;
 }
 
@@ -132,7 +136,7 @@ passageInput.addEventListener('input', () => {
         beginTest();
     }
     if(passageInput.value == words[0] || passageInput.value == words[0] + " ") {
-        $("div.word:nth-child(1)").css('color', 'green');
+        $("div.word:nth-child(1)").css('color', 'rgb(0,255,0)');
     } else {
         $("div.word:nth-child(1)").css('color', 'white');
     }
