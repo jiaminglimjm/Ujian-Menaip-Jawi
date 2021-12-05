@@ -1,4 +1,4 @@
-const rumiBank = [
+const versiRumi = [
     // hamzah berumah - ئ
     "ateisme",
     "diet",

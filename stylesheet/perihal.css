@@ -7,6 +7,7 @@ body {
     background-color:var(--bg);
     margin:0;
     padding:0;
+    display:flex;
     justify-content:center;
     font-family:"Noto Naskh Arabic";
     font-weight:300;
@@ -20,6 +21,14 @@ a {
     color:inherit;
 }
 
+div.bodyCurtain {
+    position:absolute;
+    width:100vw;
+    height:100vh;
+    background-color:var(--bg);
+    z-index:1100;
+}
+
 div.bodyContainer {
     max-width:800px;
     width: 90%;
@@ -27,12 +36,10 @@ div.bodyContainer {
     flex-direction:column;
     align-items:center;
     z-index:110;
-    margin:auto;
 }
 
 div.topNavigation_Container {
     width:100%;
-    height:80px;
     display:flex;
     flex-direction:row;
     justify-content:space-between;
@@ -77,7 +84,6 @@ div.topNavigation_Container > h1 {
     margin-right:0px;
     font-weight:700;
     color:#fff;
-    filter:blur(0.2px);
     border-right: 2px solid var(--contrast-bright);
     padding-right:12px;
     display:inline-block;
@@ -99,9 +105,9 @@ div.topNavigation_Container > div.Right {
 div.topNavigation_Container a.navItem {
     cursor:pointer;
     margin-left:20px;
-    filter:blur(0.1px);
     padding-right:10px;
     border-right: 2px solid var(--contrast-bright);
+    white-space: nowrap;
 }
 
 div.topNavigation_Container a.navItem:hover {
@@ -129,10 +135,100 @@ div.topNavigation_Container > div.Right > div.Refresh:hover {
     transition:transform .2s ease-in-out;
     transform:scale(-1, 1) rotate(360deg);
     color:var(--contrast-bright);
-    filter:blur(0.2px);
+}
+
+div.mainContent_Container {
+    width:100%;
 }
 
 div.mainContent_Container {
     width:100%;
     direction:ltr;
+}
+
+
+@media only screen and (max-device-width: 768px) {
+    div.topNavigation_Container > div.Right {
+        font-size:18px;
+    }
+    div.mainContent_Container > div.passage_Container {
+        font-size:84px;
+        margin-top:1em;
+    }
+    div.mainContent_Container > div.passageInput_hint {
+        font-size:40px;
+    }
+    div.mainContent_Container > div.passageInput_Container {
+        font-size:84px;
+        margin-top:1em;
+    }
+    input.passageInput {
+        font-size:72px;
+    }
+
+    div.topNavigation_Container > h1 {
+        font-size: 48px;
+    }
+    div.topNavigation_Container a.navItem {
+        font-size:32px;
+    }
+
+    div.stats_Container {
+        margin-top: 2em;
+    }
+    div.stats_Container > div.stats {
+        width:90%;
+        font-size:2em;
+    }
+    div.stats_Container > div.stats > div.header {
+        font-size:32px;
+    }
+
+    td {
+        padding-right: 60px;
+    }
+
+    div.endgame_Container > div.button {
+        font-size:32px;
+    }
+    div.footer_Container {
+        position: absolute;
+        bottom:100px;
+    }
+    div.footer_Container > a.Tag {
+        font-size:30px;
+    }
+
+    div.mainContent_Container > div.passageInput_miss {
+        color:rgb(255,0,0);
+        height:50px;
+        font-size:50px;
+    }
+
+
+
+    div.topNavigation_Container > h1 > span.hamzahtigasuku {
+        bottom: 12px;
+        position: relative;
+    }
+    div.passageInput_hint > span.hamzahtigasuku {
+        bottom: 8px;
+        position: relative;
+    }
+    td > span.hamzahtigasuku {
+        bottom: 6px;
+        position: relative;
+    }
+    div.button > span.hamzahtigasuku {
+        bottom: 5px;
+        position: relative;
+    }
+    div.word > span.hamzahtigasuku {
+        bottom: 22px;
+        position: relative;
+        font-size: 72px;
+    }
+
+
+
 }
