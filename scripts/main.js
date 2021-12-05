@@ -35,7 +35,7 @@ $(document).ready(function() {
         let div = document.createElement("div");
         div.className = 'word';
         // hamzah tiga suku
-        div.innerHTML = e.replace('ء', '<span style="bottom:8px;position:relative;">ء</span>');
+        div.innerHTML = e.replace('ء', '<span class="hamzahtigasuku">ء</span>');
         passageContainer.appendChild(div);
     });
 })
