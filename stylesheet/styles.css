@@ -323,19 +323,20 @@ div.topNavigation_Container > h1 > span.hamzahtigasuku {
 }
 div.passageInput_hint > span.hamzahtigasuku {
     bottom: 5px;
-    position: relative
+    position: relative;
 }
 td > span.hamzahtigasuku {
     bottom: 4px;
-    position: relative
+    position: relative;
 }
 div.button > span.hamzahtigasuku {
     bottom: 3px;
-    position: relative
+    position: relative;
 }
 div.word > span.hamzahtigasuku {
-    bottom: 8px;
-    position: relative
+    bottom: 10px;
+    position: relative;
+    font-size: 36px;
 }
 
 @media only screen and (max-device-width: 768px) {
