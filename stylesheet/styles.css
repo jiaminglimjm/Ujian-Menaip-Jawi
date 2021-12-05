@@ -383,7 +383,6 @@ div.word > span.hamzahtigasuku {
         font-size:32px;
     }
     div.footer_Container {
-        position: absolute;
         bottom:100px;
     }
     div.footer_Container > a.Tag {
