@@ -1,11 +1,10 @@
 # اوجين مناءيڤ جاوي (Ujian Menaip Jawi)
 
 Senarai tugasan:
-- mencari purata bagi panjang perkataan jawi
+- kira purata panjang perkataan jawi
 - terjemahkan "WPM"
 - huruf ك dan ڬ? (sistem ejaan lain?)
-- tambah perkataan
-- hamzah tiga suku?
+- unikod untuk hamzah tiga suku. 0674 ٴ ARABIC LETTER HIGH HAMZA ?
 
 ## Demo
 ![Demo Image](/gambar/pratonton.png)
