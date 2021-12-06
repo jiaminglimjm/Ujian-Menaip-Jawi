@@ -10,7 +10,6 @@ body {
     display:flex;
     justify-content:center;
     font-family:"Noto Naskh Arabic";
-    font-weight:300;
     color:#fff;
 
     direction: rtl;
