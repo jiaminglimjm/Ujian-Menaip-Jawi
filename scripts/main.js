@@ -79,7 +79,18 @@ function shiftWord() {
     words.shift();
 }
 
+function menormalkanPerkataan(perkataan) {
+    perkataan = perkataan.replace('\uFDF2', 'الله');
+    perkataan = perkataan.replace('ك', 'ک');
+    perkataan = perkataan.replace('ڬ', 'ݢ');
+    perkataan = perkataan.replace('گ', 'ݢ');
+    perkataan = perkataan.replace('ٴ', 'ء');
+    perkataan = perkataan.replace('۶', 'ء');
+    return perkataan;
+}
+
 function submitWord(word) {
+    passageInput.value = menormalkanPerkataan(passageInput.value);
     const isCorrect = Boolean(passageInput.value == (words[0] + ' '));
     totalWords += 1;
     if(isCorrect)
@@ -167,6 +178,7 @@ passageInput.addEventListener('input', () => {
         updateWordsRemaining();
         beginTest();
     }
+    passageInput.value = menormalkanPerkataan(passageInput.value);
     if(passageInput.value == words[0] || passageInput.value == words[0] + " ") {
         $("div.word:nth-child(1)").css('color', 'rgb(0,232,0)');
     } else {

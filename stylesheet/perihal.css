@@ -145,6 +145,10 @@ div.mainContent_Container {
     direction:ltr;
 }
 
+span.hurufdinormalisasi {
+    font-size: 200%;
+}
+
 
 @media only screen and (max-device-width: 768px) {
     div.topNavigation_Container > div.Right {
