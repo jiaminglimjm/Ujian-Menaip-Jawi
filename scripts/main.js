@@ -80,12 +80,13 @@ function shiftWord() {
 }
 
 function menormalkanPerkataan(perkataan) {
-    perkataan = perkataan.replace('\uFDF2', 'الله');
+    // mungkin hujah2 sepertinya terbalik, tapi itu hanya kerana pemapar tunjukkan secara Kanan-ke-Kiri
     perkataan = perkataan.replace('ك', 'ک');
     perkataan = perkataan.replace('ڬ', 'ݢ');
     perkataan = perkataan.replace('گ', 'ݢ');
     perkataan = perkataan.replace('ٴ', 'ء');
     perkataan = perkataan.replace('۶', 'ء');
+    perkataan = perkataan.replace('الله', '\uFDF2');
     return perkataan;
 }
 
