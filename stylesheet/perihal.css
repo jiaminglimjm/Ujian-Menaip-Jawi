@@ -9,7 +9,7 @@ body {
     padding:0;
     display:flex;
     justify-content:center;
-    font-family:"Noto Naskh Arabic";
+    font-family:"Noto Naskh Arabic", sans-serif;
     color:#fff;
 
     direction: rtl;
@@ -147,6 +147,7 @@ div.mainContent_Container {
 
 span.hurufdinormalisasi {
     font-size: 200%;
+    font-family: "Noto Naskh Arabic", "Simplified Arabic", "Times New Roman";
 }
 
 

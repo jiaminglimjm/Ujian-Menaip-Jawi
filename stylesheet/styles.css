@@ -9,7 +9,7 @@ body {
     padding:0;
     display:flex;
     justify-content:center;
-    font-family:"Noto Naskh Arabic";
+    font-family:"Noto Naskh Arabic", sans-serif;
     font-weight:300;
     color:#fff;
 
@@ -145,7 +145,7 @@ div.mainContent_Container > div.passage_Container {
     margin-top:40px;
     font-size:42px;
     font-weight:700;
-    font-family:"Noto Naskh Arabic";
+    font-family:"Noto Naskh Arabic", "Simplified Arabic", "Times New Roman";
     text-align:right;
     display:flex;
     flex-direction:row;
@@ -155,7 +155,7 @@ div.mainContent_Container > div.passage_Container {
 div.mainContent_Container > div.passageInput_Container {
     font-size:42px;
     font-weight:700;
-    font-family:"Noto Naskh Arabic";
+    font-family:"Noto Naskh Arabic", "Simplified Arabic", "Times New Roman";
     text-align:left;
     display:flex;
     flex-direction:row;
@@ -169,7 +169,7 @@ input.passageInput {
     width:100%;
     font-weight:700;
     font-size:42px;
-    font-family:"Noto Naskh Arabic";
+    font-family:"Noto Naskh Arabic", "Simplified Arabic", "Times New Roman";
     color:rgba(255,255,255,0.3);
     background-color:rgba(0,0,0,0.1);
     border-radius:4px;
@@ -181,7 +181,7 @@ input.passageInput:focus {
 
 div.mainContent_Container > div.passageInput_hint {
     display:block;
-    font-family:"Noto Naskh Arabic";
+    font-family:"Noto Naskh Arabic", "Simplified Arabic", "Times New Roman";
     text-align:center;
     font-weight:700;
     font-size:20px;
@@ -304,7 +304,7 @@ div.endgame_Container > div.button:hover {
 
 div.mainContent_Container > div.passageInput_miss {
     color:rgb(255,0,0);
-    font-family:"Noto Naskh Arabic";
+    font-family:"Noto Naskh Arabic", "Simplified Arabic", "Times New Roman";
     width:40px;
     height:40px;
     font-size:30px;
