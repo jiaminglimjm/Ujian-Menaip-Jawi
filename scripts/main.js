@@ -86,7 +86,6 @@ function menormalkanPerkataan(perkataan) {
     perkataan = perkataan.replace('گ', 'ݢ');
     perkataan = perkataan.replace('ٴ', 'ء');
     perkataan = perkataan.replace('۶', 'ء');
-    perkataan = perkataan.replace('الله', '\uFDF2');
     return perkataan;
 }
 
