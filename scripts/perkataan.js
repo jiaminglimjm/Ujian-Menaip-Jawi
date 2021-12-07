@@ -180,6 +180,7 @@ const versiRumi = [
     "sahaja",
     "syarat",
     "buku-buku",
+    "roda",
 
 
 
@@ -501,6 +502,7 @@ const wordBank = [
     "سهاج",
     "شرط",
     "بوکو٢",
+    "رودا",
 
 
 
